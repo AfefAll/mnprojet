@@ -1,0 +1,57 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "nom": "Afef",
+      "prenom": "Allani",
+      "anneés": 2021
+    }
+  ],
+  "Add": [
+    {
+      "id": 1,
+      "def": "garder la distance",
+      "image": "https://img4.foodbevg.com/727/936/3660847887279365.jpg"
+    },
+    {
+      "id": 2,
+      "def": "Commencez l'année avec FRISKI",
+      "image": "https://img5.foodbevg.com/130/596/3587248581305963.jpg"
+    },
+    {
+      "id": 3,
+      "def": "enjoy your movie",
+      "image": "https://img5.foodbevg.com/536/840/3679957445368409.jpg"
+    }
+  ],
+  "glace_Details": [
+    {
+      "id": 1,
+      "Name": "Eskimo",
+      "Details": "Eskimo",
+      "Prix": 15,
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/a42f3a81704437.Y3JvcCwxNTM5LDEyMDQsMCww.jpg"
+    },
+    {
+      "id": 3,
+      "Name": "Paname",
+      "Details": "Paname",
+      "Prix": 15,
+      "image": "https://img4.foodbevg.com/967/198/3536921679671987.jpg"
+    },
+    {
+      "id": 4,
+      "Name": "Keens",
+      "Details": "Keens",
+      "Prix": 15,
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/a42f3a81704437.Y3JvcCwxNTM5LDEyMDQsMCww.jpg"
+    },
+    {
+      "Name": "Paname Chocolat",
+      "Details": "Paname Chocolat",
+      "Prix": "25",
+      "image": "https://img4.foodbevg.com/870/275/3679947278702759.jpg",
+      "id": 6
+    }
+  ]
+}
