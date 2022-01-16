@@ -1,11 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Users } from '../interfaces/users';
 @Injectable({
   providedIn: 'root'
 })
 export class OrderDetailsService {
   public prod:any[]=[]
+  _verifier=new Subject()
+  ok$=this._verifier.asObservable()
+
+
   constructor(private http:HttpClient) { }
 glaceDetails(){
  return new Promise((res,rej)=>{
@@ -29,6 +34,7 @@ onLogin(p:any):Promise<String>{
             //resolve("email correct")
             if(p.password==utilusateurs[i].password){
               console.log("password correct")
+              this._verifier.next(true)
               resolve("password and email correct")
               break
             
@@ -52,4 +58,13 @@ onLogin(p:any):Promise<String>{
 }
 
 
+onAddNewUser(f:any){
+  return new Promise((resolve, reject) => {
+    this.http.post("http://localhost:3000/user",f).subscribe((res)=>{
+      this._verifier.next(true)
+      resolve(res)
+
+    })
+  })
+}
 }

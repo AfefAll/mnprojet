@@ -25,9 +25,7 @@ export class ContactComponent implements OnInit {
   }).then(()=>{
     setTimeout(() => {
       this.router.navigate(["/home"])
-    }, 1500);
-
-
+    }, 500);
   })
   .catch((err)=>{
     this.problem=err

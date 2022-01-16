@@ -12,6 +12,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AjouterProdComponent } from './ajouter-prod/ajouter-prod.component';
 import { FormsModule } from '@angular/forms';
+import { AjouterUserComponent } from './ajouter-user/ajouter-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     AboutComponent,
     ContactComponent,
-    AjouterProdComponent
+    AjouterProdComponent,
+    AjouterUserComponent
   ],
   imports: [
     BrowserModule,

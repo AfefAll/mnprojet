@@ -1,0 +1,30 @@
+<div class="container">
+<form #f="ngForm" (submit)="addUser(f.value)">
+    <label class="form-label">Nom</label>
+    <input type="text" class="form-control" #nom="ngModel" ngModel name="nom">
+
+    <label class="form-label">Prenom</label>
+    <input type="text" class="form-control" #prenom="ngModel" ngModel name="prenon">
+
+    <label class="form-label">dateNaissance</label>
+    <input type="text" class="form-control" #date="ngModel" ngModel name="date">
+
+    <label class="form-label">E-mail</label>
+    <input type="text" class="form-control" #email="ngModel" ngModel name="email">
+
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" #password="ngModel" ngModel name="password"><br>
+
+    <button class="btn btn-primary" type="submit">Créer compte</button>
+
+
+</form>
+
+
+
+
+
+
+
+
+</div>
