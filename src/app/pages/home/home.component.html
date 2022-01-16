@@ -5,41 +5,14 @@
         <a routerLink="menu">Order now <i class="bi bi-arrow-right"></i></a>
     </div>   
 </div>
-<!--step-->
-<div class="container mt-5 mb-5">
-    <h1 class="text-center">How to get <span class="highlight">delicious Ice cream</span></h1>
-    <div class="row mt-5">
-        <!--one-->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>1</h1>
-                <p>Select Ice cream</p>
-            </div>
-        </div>
-        <!--two-->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>2</h1>
-                <p>Fill the details</p>
-            </div>           
-        </div>
-        <!--three-->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>3</h1>
-                <p>Your order delivered in minute</p>
-            </div>
-        </div>
-    </div>
-</div>
 <!--foodbox-->
 <div class="container mt-4 mb-4">
     <h1 class="text-center mt-3">Customers <span class="highlight">Favourites Ice cream</span></h1>
     <div class="row">
-        <div class="col-lg-3 mt-3" *ngFor="let p of Add; index as i">
+        <div class="col-lg-3 mt-3" *ngFor="let c of choix ; index as i">
             <div class="foodbox" *ngIf="i<=3">
-                <img [src]="p.image"/>
-                <h1>{{p.def}}</h1>
+                <img [src]="c.image"/>
+                <h1>{{c.def}}</h1>
               
             </div>
         </div>

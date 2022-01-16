@@ -1,13 +1,14 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
 
-    <div class="col" *ngFor="let p of foodData"> 
+    <div class="col" *ngFor="let d of data"> 
       <div class="card">
-        <img [src]="p.image" class="card-img-top" alt="...">
+        <img [src]="d.image" class="card-img" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{p.Name}}</h5>
-          <p class="card-text">{{p.Details}}</p>
-          <p class="card-text">{{p.Prix}} TND</p><br>
-          <button (click)="supprimerProd(p.id)" class="btn btn-danger">Supprimer</button>  
+          <h5 class="card-title">{{d.Name}}</h5>
+          <p class="card-text">{{d.Details}}</p>
+          <p class="card-text">{{d.Prix}} TND</p><br>
+          <button (click)="buyBtn()" class="buyBtn">Buy Now</button><br><br>
+          <button (click)="supprimerBtn(d.id)" class="btn btn-danger">Supprimer</button>  
         </div>
       </div>
     </div>

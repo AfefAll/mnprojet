@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Users } from '../interfaces/users';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +15,40 @@ glaceDetails(){
     res(data)
    })
  }) 
-   
 
+}
+onLogin(p:any):Promise<String>{
+  return new Promise((resolve,reject)=>{
+    this.http.get<Users[]>("http://localhost:3000/user").subscribe(utilusateurs=>{
+
+   
+      for(let i=0; i<utilusateurs.length;i++){
+          if (p.email==utilusateurs[i].email)
+          {
+            console.log("email correct")
+            //resolve("email correct")
+            if(p.password==utilusateurs[i].password){
+              console.log("password correct")
+              resolve("password and email correct")
+              break
+            
+          }else{
+            console.log("password incorrect")
+            reject("email correct and password incorrect")
+            break
+          }
+        
+          } else if (i==utilusateurs.length-1 && p.email!=utilusateurs[i].email ){
+            console.log("email incorrect")
+            reject("email incorrect")
+
+          }
+        
+        }
+  
+      })
+
+  })
 }
 
 

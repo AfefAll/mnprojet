@@ -1,1 +1,27 @@
-<p>contact works!</p>
+<div>
+    <form  #f="ngForm" class="px-4 py-3"> 
+      <div class="mb-3">
+        <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" #email="ngModel" ngModel name="email" placeholder="email@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" #password="ngModel" ngModel name="password"  placeholder="Password">
+      </div>
+      <div class="mb-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+          <label class="form-check-label" for="dropdownCheck">
+            Remember me
+          </label>   
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="signIn(f.value)" >Sign in</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">New around here? Sign up</a>
+    <a class="dropdown-item" href="#">Forgot password?</a>
+    <br>
+    <div class="alert alert-danger " *ngIf="problem">{{problem}}   </div>
+    <div class="alert alert-success" *ngIf="success">{{success}}   </div>
+  </div>

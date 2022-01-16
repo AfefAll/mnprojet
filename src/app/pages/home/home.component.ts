@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 Produit:any
-Add:any
+choix:any
 
 
   constructor(private service:OrderDetailsService,private http:HttpClient, private router:Router) {
-    this.afficheAdd().then(data=>{
-      this.Add=data
+    this.afficheChoix().then(data=>{
+      this.choix=data
     })
    }
   ngOnInit(): void {
@@ -36,10 +36,10 @@ onGetUsers()
   console.log("voici les utilisateurs "+ JSON.stringify(res) )
   })
 }
-afficheAdd(){
+afficheChoix(){
 return new Promise((resolve,reject)=>{
-  this.http.get("http://localhost:3000/Add").subscribe((res)=>{
-    this.Add=res
+  this.http.get("http://localhost:3000/choix").subscribe((res)=>{
+    this.choix=res
     resolve(res)
   })
 })

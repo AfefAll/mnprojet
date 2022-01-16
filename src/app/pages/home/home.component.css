@@ -1,7 +1,7 @@
 .banner
 {
-    background-image: url('../../../assets/image/eskimo.jpg');
-    height: 700px;
+    background-image: url('../../../assets/image/fraise.jpg');
+    height: 500px;
     background-position:center top;
     background-size: cover ;
 }
@@ -9,12 +9,12 @@
 .content
 {
     top:30%;
-    left: 20%;
+    left: 5%;
     position: absolute;
 }
 .content h1
 {
-    color:#fff;
+    color:#3fc060;
     font-size: 53px;
     font-weight: bold;
 }

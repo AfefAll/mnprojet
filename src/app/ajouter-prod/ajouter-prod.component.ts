@@ -18,10 +18,7 @@ export class AjouterProdComponent implements OnInit {
   ngOnInit(): void {
   }
  onPostProduit(p:any){
-this.http.post("http://localhost:3000/glace_Details",p).subscribe(res=>{
-
-
-})
+this.http.post("http://localhost:3000/glace_Details",p).subscribe(res=>{})
 
  }
 
