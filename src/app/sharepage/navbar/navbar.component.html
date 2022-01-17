@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav  class="navbar navbar-expand-lg" style="z-index: 140;position: fixed;right: 0;left: 0;height: 53px;color: white;">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="">Vilavi Ice Cream</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a>
+            <a class="nav-link active" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" *ngIf="!verifier"> <i class="fa fa-home"></i> Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="menu" routerLinkActive="active-link" *ngIf="verifier">Menu</a>
@@ -17,16 +17,16 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="about" routerLinkActive="active-link">About</a>
+            <a class="nav-link" routerLink="about" routerLinkActive="active-link"*ngIf="!verifier">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="ajouterUser" routerLinkActive="active-link" *ngIf="!verifier">New user</a>
+            <a class="nav-link" routerLink="ajouterUser" routerLinkActive="active-link" *ngIf="!verifier"><i class="fa fa-user-plus"></i> New user </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact" routerLinkActive="active-link" *ngIf="!verifier">Login</a>
+            <a class="nav-link" routerLink="contact" routerLinkActive="active-link" *ngIf="!verifier"><i class="fa fa-user-circle"></i> Connexion </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="home" routerLinkActive="active-link" (click)="logout()" *ngIf="verifier">Logout</a>
+            <a class="nav-link" routerLink="home" routerLinkActive="active-link" (click)="logout()" *ngIf="verifier"><i class="fa fa-sign-in"></i> Logout</a>
           </li>
         </ul>
       </div>
