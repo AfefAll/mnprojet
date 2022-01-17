@@ -1,12 +1,6 @@
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown button
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
+<div class="card border-success mb-3"style="margin-top: 100px;">
+  <div class="card-body text-success" *ngFor="let a of data">
+    <h5 class="card-title">{{a.nom}}</h5>
+    <p class="card-text">{{a.adresse}}</p>  
   </div>
-
-  button option
+</div> 

@@ -1,34 +1,45 @@
-<nav  class="navbar navbar-expand-lg" style="z-index: 140;position: fixed;right: 0;left: 0;height: 53px;color: white;">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="">Vilavi Ice Cream</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" *ngIf="!verifier"> <i class="fa fa-home"></i> Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="menu" routerLinkActive="active-link" *ngIf="verifier">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="ajouterProd" routerLinkActive="active-link" *ngIf="verifier">Ajouter Produit</a>
-          </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"style="position: fixed; z-index: 1000px; width: 100%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Ice Cream</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"> <i class="fa fa-home"></i> Accueil</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="verifier">Menu</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="menu" routerLinkActive="active-link">Eskimo</a></li>
+            <li><a class="dropdown-item" routerLink="menu" routerLinkActive="active-link">Ola</a></li>
+            <li><a class="dropdown-item" routerLink="menu" routerLinkActive="active-link">Paname</a></li>
+            <li><a class="dropdown-item" routerLink="menu" routerLinkActive="active-link">london dairy</a></li>
+            <li><a class="dropdown-item" routerLink="menu" routerLinkActive="active-link">Thelja</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ajouterProd" routerLinkActive="active-link" *ngIf="verifier"><i class="fa fa-plus"></i> Produit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="active-link"*ngIf="verifier"><i class="fa fa-map-marker"></i> Adresse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ajouterUser" routerLinkActive="active-link" *ngIf="!verifier"><i class="fa fa-user-plus"></i> S'inscrire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact" routerLinkActive="active-link" *ngIf="!verifier"><i class="fa fa-user-circle"></i> Se Connecter </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive="active-link" (click)="logout()" *ngIf="verifier"><i class="fa fa-sign-in"></i> Logout</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" routerLink="about" routerLinkActive="active-link"*ngIf="!verifier">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="ajouterUser" routerLinkActive="active-link" *ngIf="!verifier"><i class="fa fa-user-plus"></i> New user </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="contact" routerLinkActive="active-link" *ngIf="!verifier"><i class="fa fa-user-circle"></i> Connexion </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="home" routerLinkActive="active-link" (click)="logout()" *ngIf="verifier"><i class="fa fa-sign-in"></i> Logout</a>
-          </li>
-        </ul>
-      </div>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>

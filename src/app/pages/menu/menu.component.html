@@ -1,13 +1,13 @@
-<div class="row row-cols-1 row-cols-md-4 g-4">
+<div class="row row-cols-5" style="margin-top: 40px;">
 
-    <div class="col" *ngFor="let d of data"> 
-      <div class="card">
-        <img [src]="d.image" class="card-img" alt="...">
+    <div class="col"  *ngFor="let d of data" > 
+      <div>
+        <img [src]="d.image" class="card-img" style="border-radius:5px;">
         <div class="card-body">
           <h5 class="card-title">{{d.Name}}</h5>
           <p class="card-text">{{d.Details}}</p>
-          <p class="card-text">{{d.Prix}} TND</p><br>
-          <button (click)="buyBtn()" class="buyBtn">Buy Now</button><br><br>
+          <p class="card-text">{{d.Prix}} TND</p>
+          <button (click)="buyBtn()" class="buyBtn"><i class="fa fa-shopping-cart"></i> Ajout au panier</button><br><br>
           <button (click)="supprimerBtn(d.id)" class="btn btn-danger">Supprimer</button>  
         </div>
       </div>

@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container" style="margin-top: 40px;">
 <form #f="ngForm" (submit)="addUser(f.value)">
     <label class="form-label">Nom</label>
     <input type="text" class="form-control" #nom="ngModel" ngModel name="nom">
 
-    <label class="form-label">Prenom</label>
+    <label class="form-label">Prénom</label>
     <input type="text" class="form-control" #prenom="ngModel" ngModel name="prenon">
 
-    <label class="form-label">dateNaissance</label>
+    <label class="form-label">Date de Naissance</label>
     <input type="text" class="form-control" #date="ngModel" ngModel name="date">
 
     <label class="form-label">E-mail</label>
@@ -14,10 +14,8 @@
 
     <label class="form-label">Password</label>
     <input type="password" class="form-control" #password="ngModel" ngModel name="password"><br>
-
+    
     <button class="btn btn-primary" type="submit">Créer compte</button>
-
-
 </form>
 
 
